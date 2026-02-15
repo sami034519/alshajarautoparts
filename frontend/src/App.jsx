@@ -2,8 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import ProductPage from "./products/ProductPage";
-import { Header } from "./components/Header";
-import Footer from "./components/Footer";
+// import { Header } from "./components/Header";
+// import Footer from "./components/Footer";
 import ContactPage from "./pages/Contact/Contact";
 import AboutUs from "./pages/Aboutus/Aboutus";
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       {/* HEADER */}
-      <Header />
+      {/* <Header /> */}
 
       {/* PAGES */}
       <Routes>
@@ -22,7 +22,7 @@ function App() {
       </Routes>
 
       {/* FOOTER */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
