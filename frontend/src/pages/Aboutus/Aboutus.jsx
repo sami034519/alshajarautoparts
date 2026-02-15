@@ -43,7 +43,7 @@ export default function AboutUs() {
           className="absolute inset-0 flex items-center justify-center text-4xl md:text-5xl font-bold text-white"
           data-aos="zoom-in"
         >
-          About Us
+          About
         </h1>
       </section>
 
