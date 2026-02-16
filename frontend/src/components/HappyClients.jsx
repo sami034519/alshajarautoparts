@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: 35, label: "Years of Industry Experience" },
-  { value: 20, label: "Branches across UAE" },
+  { value: 200, label: "Types of Prducts" },
   { value: 5000, label: "Loyal Customers", suffix: "K+" },
   { value: 10, label: "Major Car Brands" },
-  { value: 150, label: "Dedicated Employees" },
+  { value: 5000, label: "Happy Clients",suffix: "K+" },
 ];
 
 function CircleStat({ value, label, suffix = "+" }) {

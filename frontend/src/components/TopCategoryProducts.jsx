@@ -30,7 +30,7 @@ export default function TopCategoryProducts() {
       <div className="max-w-7xl mx-auto px-5">
         {/* HEADER */}
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-700">
+          <h2 className="lg:text-3xl text-lg font-bold text-gray-700">
             <span className="text-green-700">Top</span> Category Products
           </h2>
 

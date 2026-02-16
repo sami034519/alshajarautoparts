@@ -14,7 +14,7 @@ import jeep from '../images/jeep.jpg'
 import Chrysler from '../images/Chrysler.jpg'
 import volvo from '../images/volvo.png'
 import tesla from '../images/tesla.jpg'
-import banner from '../images/banner4.png'
+import banner from '../images/bannerfirst.png'
 
 
 export default function CarCarousel() {
@@ -107,16 +107,16 @@ export default function CarCarousel() {
     <div className="relative w-full">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="relative w-full h-[80vh]">
+          <div key={index} className="relative w-full lg:h-[80vh]">
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-[80vh] object-cover"
+              className="w-full lg:h-[80vh] h-[30vh] object-cover "
             />
             {/* Overlay with left-aligned text */}
             <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center ">
               <div className="max-w-xl">
-                <h1 className="text-3xl md:text-5xl bg-opacity-55 bg-black font-bold p-5 text-white drop-shadow-lg mb-4">
+                <h1 className="lg:text-3xl text-xl md:text-5xl bg-opacity-55 bg-black font-bold p-5 text-white drop-shadow-lg mb-4">
                   {slide.title}
                 </h1>
                 

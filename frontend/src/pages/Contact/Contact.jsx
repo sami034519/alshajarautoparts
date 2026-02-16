@@ -42,15 +42,15 @@ export default function ContactPage() {
           <div className="space-y-4 text-gray-700">
             <div className="flex items-start gap-4">
               <MapPin className="w-6 h-6 text-green-700 mt-1" />
-              <span>Mussafah M7, Plot No. 70, near LLH hospital, Abu Dhabi, P.O. Box 9798</span>
+              <span>Right Side, First Signal Musaffah - Musaffah - M7 - Abu Dhabi - United Arab Emirates</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="w-6 h-6 text-green-700" />
-              <span>050 4970097 / 056 9984165</span>
+              <span>+971567657775 / +97125542468</span>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="w-6 h-6 text-green-700" />
-              <span>info@bestautoparts.ae</span>
+              <span>alshajarparts@gmail.com</span>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export default function ContactPage() {
               <MessageCircle className="w-6 h-6" />
               <h3 className="text-xl font-semibold">Need help?</h3>
             </div>
-            <p>Call our product expert <span className="font-bold">+971 50 4970097</span></p>
+            <p>Call our product expert <span className="font-bold">+97125542468</span></p>
             <button className="bg-white slide-hover text-green-700 py-2 px-4 rounded  transition flex items-center gap-2">
               <MessageCircle className="w-5 h-5" /> Chat With Us
             </button>

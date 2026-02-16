@@ -37,14 +37,14 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="max-w-7xl overflow-hidden mx-auto mt-10 px-4 py-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+    <div className="max-w-7xl overflow-hidden mx-auto lg:mt-10 px-4 lg:py-10">
+      <div className="grid grid-cols-1 text-center sm:grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-start gap-2"
-            data-aos="fade-up" // <-- AOS animation
-            data-aos-delay={index * 100} // optional: stagger effect
+            className="flex flex-col items-center text-center lg:items-start lg:text-left lg:gap-2"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
             <div>{service.icon}</div>
             <h3 className="font-bold text-gray-900">{service.title}</h3>

@@ -12,7 +12,7 @@ import accessories from '../images/accessories.webp'
 const productCards = [
   {
     title: "SPARE PARTS",
-    subtitle: "For Any Vehicle",
+    subtitle: "",
     image: spareparts,
   },
   {
@@ -22,12 +22,12 @@ const productCards = [
   },
   {
     title: "OIL & LUBRICANTS",
-    subtitle: "For Any Vehicle",
+    subtitle: "",
     image: Oil,
   },
   {
     title: "FLUIDS",
-    subtitle: "For Any Vehicle",
+    subtitle: "",
     image: fluid,
   },
   {
@@ -38,7 +38,7 @@ const productCards = [
   
   {
     title: "ACCESSORIES",
-    subtitle: "For Any Vehicle",
+    subtitle: "",
     image: accessories,
   },
 

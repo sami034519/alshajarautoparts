@@ -2,10 +2,7 @@ import React from "react";
 
 import logo from "../images/alshajarlogo.png";
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
+ 
   MessageCircle,
 } from "lucide-react";
 
@@ -20,9 +17,9 @@ export default function Footer() {
           </div>
 
           <p className="text-sm leading-relaxed">
-            At Best Auto Parts, we’re a trusted name in the UAE auto parts
+            At Alshajar Auto Parts, we’re a trusted name in the UAE auto parts
             industry, known for over 35 years of providing high-quality genuine
-            and aftermarket parts.
+            parts.
           </p>
 
           {/* Feedback */}
@@ -43,13 +40,13 @@ export default function Footer() {
         {/* CONTACT INFO TOP */}
         <div className="space-y-4">
           <h3 className="text-white font-semibold">WHATSAPP US</h3>
-          <p>+971 56 998 4165</p>
+          <p>+971567657775</p>
 
           <h3 className="text-white font-semibold">CALL US</h3>
-          <p>+971 50 4970097</p>
+          <p>+97125542468</p>
 
           <h3 className="text-white font-semibold">MAIL US</h3>
-          <p>info@bestautoparts.ae</p>
+          <p>alshajarparts@gmail.com</p>
         </div>
 
         {/* POLICIES */}
@@ -96,46 +93,9 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
-        <p>© 2024 Best Auto Parts. All rights reserved.</p>
+        <p>© 2024 Alshajar Auto Parts. All rights reserved.</p>
 
         {/* Social Icons */}
-        <div className="flex gap-3 mt-4 md:mt-0">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center text-white slide-hover hover:scale-110 transition"
-          >
-            <Facebook size={20} />
-          </a>
-
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center text-white slide-hover hover:scale-110 transition"
-          >
-            <Instagram size={20} />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center text-white slide-hover hover:scale-110 transition"
-          >
-            <Linkedin size={20} />
-          </a>
-
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center text-white slide-hover hover:scale-110 transition"
-          >
-            <Youtube size={20} />
-          </a>
-        </div>
       </div>
     </footer>
   );

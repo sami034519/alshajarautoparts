@@ -16,7 +16,7 @@ const faqs = [
       "Yes, we supply spare parts for all popular vehicle makes and models including Toyota, Honda, BMW, Mercedes, and more.",
   },
   {
-    question: "Are your spare parts genuine or aftermarket?",
+    question: "Are your spare parts genuine ?",
     answer:
       "We provide both genuine and high-quality aftermarket parts depending on your preference and budget.",
   },

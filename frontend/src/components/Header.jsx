@@ -14,9 +14,16 @@ export function Header() {
 
   const brands = ["Toyota", "Honda", "Suzuki", "BMW"];
   const products = ["Spare Parts", "Oil & Lubricants", "Batteries", "Accessories"];
-  const categories = ["Spare Parts", "Oil & Lubricants", "Batteries", "Accessories"];
-
-  
+  const categories = [
+    "Spare Parts",
+    "Oil & Lubricants",
+    "Batteries",
+    "Accessories",
+    "home",
+    "product",
+    "contact",
+    "about"
+  ];
 
   // Helper for NavLink active class
   const activeClass = ({ isActive }) =>
@@ -70,7 +77,6 @@ export function Header() {
             }
           >
             <ShoppingCart className="w-5 h-5" />
-            <span>$0.00</span>
           </NavLink>
         </div>
       </div>
@@ -81,7 +87,7 @@ export function Header() {
           {/* Shop By Category Button */}
           <button
             onClick={() => setOpenCategory(true)}
-            className="flex items-center gap-2 px-5 py-2 rounded-full border border-green-700 text-green-600 slide-hover"
+            className="flex lg:text-base text-sm items-center gap-2 px-5 py-2 rounded-full border border-green-700 text-green-600 slide-hover"
           >
             <span>☰ Shop By Category</span>
           </button>
@@ -214,31 +220,67 @@ export function Header() {
             </button>
           </div>
 
-          {/* Categories */}
+          {/* Categories with proper routing */}
           <ul className="p-4 space-y-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className="block w-full text-left px-4 py-2 rounded-md text-gray-700 slide-hover"
-                onClick={() => {
-                  navigate(`/products?category=${encodeURIComponent(cat)}`);
-                  setOpenCategory(false);
-                }}
-              >
-                {cat}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              let route = "";
+              switch (cat.toLowerCase()) {
+                case "home":
+                  route = "/";
+                  break;
+                case "contact":
+                  route = "/contact";
+                  break;
+                case "about":
+                  route = "/about";
+                  break;
+                case "product":
+                  route = "/products";
+                  break;
+                default:
+                  route = `/products?category=${encodeURIComponent(cat)}`;
+              }
+
+              return (
+                <button
+                  key={cat}
+                  className="block w-full text-left px-4 py-2 rounded-md text-gray-700 slide-hover"
+                  onClick={() => {
+                    navigate(route);
+                    setOpenCategory(false);
+                  }}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </ul>
         </div>
       </div>
 
       <div className="flex w-full justify-center items-center bg-green-700 text-white font-medium text-lg py-2">
         <h1 className="flex items-center gap-2 animate-pulse">
-          <span className="text-xl">🚗</span>
+          <span className="lg:text-xl text-lg">🚗</span>
           <span>
-            Your One-Stop Shop for Genuine & Aftermarket Car Spare Parts
+            Your One-Stop Shop for Genuine Car Spare Parts
           </span>
         </h1>
+      </div>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-5 right-5 z-50">
+        <button
+          onClick={() =>
+            window.open("https://wa.me/971567657775", "_blank")
+          }
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center animate-bounce"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            className="h-6 w-6"
+          />
+        </button>
       </div>
     </header>
   );

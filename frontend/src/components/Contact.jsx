@@ -46,7 +46,7 @@ export default function Contact() {
               <Phone className="text-white w-8 h-8" />
               <div>
                 <h4 className="font-semibold text-white">Phone</h4>
-                <p className="text-white">+971 50 123 4567</p>
+                <p className="text-white">+971567657775</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ export default function Contact() {
               <Mail className="text-white w-8 h-8" />
               <div>
                 <h4 className="font-semibold text-white">Email</h4>
-                <p className="text-white">info@yourautoparts.com</p>
+                <p className="text-white lowercase">alshajarparts@gmail.com</p>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
               <MapPin className="text-white w-8 h-8" />
               <div>
                 <h4 className="font-semibold text-white">Location</h4>
-                <p className="text-white">Dubai, United Arab Emirates</p>
+                <p className="text-white">Right Side, First Signal Musaffah - Musaffah - M7 - Abu Dhabi - United Arab Emirates</p>
               </div>
             </div>
           </div>
