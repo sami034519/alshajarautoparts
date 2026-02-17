@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/Contact/Contact";
 import AboutUs from "./pages/Aboutus/Aboutus";
 import Loader from "./components/Loader";
+import ProductDetail from "./pages/Productdetail/ProductDetail";
+import Cart from "./pages/store/Cart";
 
 function App() {
   const location = useLocation();
@@ -38,6 +40,8 @@ function App() {
         <Route path="/products" element={<ProductPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
 
       {/* FOOTER */}

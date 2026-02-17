@@ -4,30 +4,36 @@ import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../images/alshajarlogo.png";
 import "../css/Hover.css";
 import "animate.css";
+import { useSelector } from "react-redux";
 
 export function Header() {
   const [openProducts, setOpenProducts] = useState(false);
   const [openBrands, setOpenBrands] = useState(false);
   const [openCategory, setOpenCategory] = useState(false);
-
+  const { totalQuantity } = useSelector((state) => state.cart);
   const navigate = useNavigate();
 
- const brands = [
-  "Toyota",
-  "Lexus",
-  "Nissan",
-  "Infiniti",
-  "Dodge Ram",
-  "Chevrolet",
-  "Ford",
-  "GMC",
-  "Jeep",
-  "Chrysler",
-  "Volvo",
-  "Tesla"
-];
+  const brands = [
+    "Toyota",
+    "Lexus",
+    "Nissan",
+    "Infiniti",
+    "Dodge Ram",
+    "Chevrolet",
+    "Ford",
+    "GMC",
+    "Jeep",
+    "Chrysler",
+    "Volvo",
+    "Tesla",
+  ];
 
-  const products = ["Spare Parts", "Oil & Lubricants", "Batteries", "Accessories"];
+  const products = [
+    "Spare Parts",
+    "Oil & Lubricants",
+    "Batteries",
+    "Accessories",
+  ];
   const categories = [
     "Spare Parts",
     "Oil & Lubricants",
@@ -36,7 +42,7 @@ export function Header() {
     "home",
     "product",
     "contact",
-    "about"
+    "about",
   ];
 
   // Helper for NavLink active class
@@ -82,16 +88,23 @@ export function Header() {
             <span className="hidden sm:inline font-medium">My Account</span>
           </NavLink>
 
-          <NavLink
-            to="/cart"
-            className={({ isActive }) =>
-              isActive
-                ? "flex items-center gap-1 text-green-700 font-bold slide-hover"
-                : "flex items-center gap-1 slide-hover"
-            }
-          >
-            <ShoppingCart className="w-5 h-5" />
-          </NavLink>
+        <NavLink
+  to="/cart"
+  className={({ isActive }) =>
+    isActive
+      ? "relative flex items-center gap-1 text-green-700 font-bold"
+      : "relative flex items-center gap-1 hover:bg-green-700 hover:text-white"
+  }
+>
+  <ShoppingCart className="w-5 h-5" />
+  {totalQuantity > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+      {totalQuantity}
+    </span>
+  )}
+</NavLink>
+
+
         </div>
       </div>
 
@@ -128,7 +141,9 @@ export function Header() {
                       key={brand}
                       className="block w-full text-left px-4 py-2 text-gray-700 slide-hover"
                       onClick={() => {
-                        navigate(`/products?brand=${encodeURIComponent(brand)}`);
+                        navigate(
+                          `/products?brand=${encodeURIComponent(brand)}`,
+                        );
                         setOpenBrands(false);
                       }}
                     >
@@ -155,7 +170,9 @@ export function Header() {
                       key={item}
                       className="block w-full text-left px-4 py-2 text-gray-700 slide-hover"
                       onClick={() => {
-                        navigate(`/products?category=${encodeURIComponent(item)}`);
+                        navigate(
+                          `/products?category=${encodeURIComponent(item)}`,
+                        );
                         setOpenProducts(false);
                       }}
                     >
@@ -275,18 +292,14 @@ export function Header() {
       <div className="flex w-full justify-center items-center bg-green-700 text-white font-medium text-lg py-2">
         <h1 className="flex items-center gap-2 animate-pulse">
           <span className="lg:text-xl text-lg">🚗</span>
-          <span>
-            Your One-Stop Shop for Genuine Car Spare Parts
-          </span>
+          <span>Your One-Stop Shop for Genuine Car Spare Parts</span>
         </h1>
       </div>
 
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-5 right-5 z-50">
         <button
-          onClick={() =>
-            window.open("https://wa.me/971567657775", "_blank")
-          }
+          onClick={() => window.open("https://wa.me/971567657775", "_blank")}
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center animate-bounce"
         >
           <img

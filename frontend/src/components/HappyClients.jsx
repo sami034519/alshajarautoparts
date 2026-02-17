@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: 35, label: "Years of Industry Experience" },
-  { value: 200, label: "Types of Prducts" },
+  { value: 20, label: "Types of Prducts", suffix: "K+" },
   { value: 5000, label: "Loyal Customers", suffix: "K+" },
   { value: 10, label: "Major Car Brands" },
   { value: 5000, label: "Happy Clients",suffix: "K+" },

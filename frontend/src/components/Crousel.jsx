@@ -14,7 +14,7 @@ import jeep from '../images/jeep.jpg'
 import Chrysler from '../images/Chrysler.jpg'
 import volvo from '../images/volvo.png'
 import tesla from '../images/tesla.jpg'
-import banner from '../images/bannerfirst.png'
+import banner from '../images/bannerfirst1.png'
 import Landcrouser from '../images/landcrouser.jpg'
 
 
