@@ -12,7 +12,21 @@ export function Header() {
 
   const navigate = useNavigate();
 
-  const brands = ["Toyota", "Honda", "Suzuki", "BMW"];
+ const brands = [
+  "Toyota",
+  "Lexus",
+  "Nissan",
+  "Infiniti",
+  "Dodge Ram",
+  "Chevrolet",
+  "Ford",
+  "GMC",
+  "Jeep",
+  "Chrysler",
+  "Volvo",
+  "Tesla"
+];
+
   const products = ["Spare Parts", "Oil & Lubricants", "Batteries", "Accessories"];
   const categories = [
     "Spare Parts",

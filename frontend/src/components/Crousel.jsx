@@ -15,6 +15,7 @@ import Chrysler from '../images/Chrysler.jpg'
 import volvo from '../images/volvo.png'
 import tesla from '../images/tesla.jpg'
 import banner from '../images/bannerfirst.png'
+import Landcrouser from '../images/landcrouser.jpg'
 
 
 export default function CarCarousel() {
@@ -85,6 +86,11 @@ export default function CarCarousel() {
   title: "TESLA SAFETY & PERFORMANCE PARTS",
   subtitle: "Premium parts designed for Volvo safety and reliability",
   image: tesla,
+},
+{
+  title: "LAND CROUSER SAFETY & PERFORMANCE PARTS",
+  subtitle: "Premium parts designed for Volvo safety and reliability",
+  image: Landcrouser,
 },
 
 ];

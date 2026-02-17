@@ -86,7 +86,7 @@ export default function Footer() {
           <h3 className="text-white font-semibold mt-6 mb-3">ENQUIRE NOW</h3>
           <ul className="space-y-2 text-sm">
             <li>Genuine Auto Parts</li>
-            <li>After Market Parts</li>
+            
           </ul>
         </div>
       </div>

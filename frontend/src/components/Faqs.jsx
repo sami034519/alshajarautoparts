@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "What types of spare parts do you offer?",
     answer:
-      "We offer various auto spare parts Abu Dhabi, genuine and aftermarket spares for auto such as engines, brakes, batteries, tyres, fluids, lubricants, and accessories. We have got you covered whether you need a particular spare for performance or for daily maintenance at Best Auto Parts Al Ain.",
+      "We offer various auto spare parts Abu Dhabi, genuine spares for auto such as engines, brakes, batteries, tyres, fluids, lubricants, and accessories. We have got you covered whether you need a particular spare for performance or for daily maintenance at Best Auto Parts Al Ain.",
   },
   {
     question: "Do you supply parts for all vehicle makes and models?",
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Are your spare parts genuine ?",
     answer:
-      "We provide both genuine and high-quality aftermarket parts depending on your preference and budget.",
+      "We provide both genuine and Long Lasting parts depending on your preference and budget.",
   },
   {
     question: "How can I check if a part is compatible with my vehicle?",

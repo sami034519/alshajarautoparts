@@ -31,7 +31,7 @@ export default function Contact() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Get in touch for original and aftermarket car spare parts in UAE
+            Get in touch for original car spare parts in UAE
           </p>
         </div>
 

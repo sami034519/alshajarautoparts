@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import allProducts from "./Products";
 import ProductCard from "./ProductCard";
 import ProductFilter from "./ProductFilter";
-import productbanner from '../images/productBanner.png';
+import productbanner from "../images/productBanner.png";
 
 export default function ProductPage() {
   const [searchParams] = useSearchParams();
@@ -25,7 +25,8 @@ export default function ProductPage() {
   const filteredProducts = allProducts.filter(
     (p) =>
       (selectedBrands.length === 0 || selectedBrands.includes(p.brand)) &&
-      (selectedCategories.length === 0 || selectedCategories.includes(p.category))
+      (selectedCategories.length === 0 ||
+        selectedCategories.includes(p.category)),
   );
 
   return (
@@ -43,8 +44,26 @@ export default function ProductPage() {
         {/* Filter Sidebar */}
         <div className="lg:col-span-1">
           <ProductFilter
-            brands={["Toyota","Nissan","Ford","GMC","Jeep","Lexus"]}
-            categories={["Spare Parts","Oil & Lubricants","Batteries","Accessories"]}
+            brands={[
+              "Toyota",
+              "Lexus",
+              "Nissan",
+              "Infiniti",
+              "Dodge Ram",
+              "Chevrolet",
+              "Ford",
+              "GMC",
+              "Jeep",
+              "Chrysler",
+              "Volvo",
+              "Tesla",
+            ]}
+            categories={[
+              "Spare Parts",
+              "Oil & Lubricants",
+              "Batteries",
+              "Accessories",
+            ]}
             selectedBrands={selectedBrands}
             selectedCategories={selectedCategories}
             setSelectedBrands={setSelectedBrands}
@@ -55,8 +74,12 @@ export default function ProductPage() {
         {/* Product Grid with Vertical Scroll */}
         <div className="lg:col-span-3">
           <h1 className="text-2xl font-bold mb-5">
-            {selectedBrands.length > 0 ? selectedBrands.join(", ") : "All Brands"}{" "}
-            {selectedCategories.length > 0 ? selectedCategories.join(", ") : "Products"}
+            {selectedBrands.length > 0
+              ? selectedBrands.join(", ")
+              : "All Brands"}{" "}
+            {selectedCategories.length > 0
+              ? selectedCategories.join(", ")
+              : "Products"}
           </h1>
 
           {/* Scrollable container */}
